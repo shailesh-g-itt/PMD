@@ -1,17 +1,68 @@
 {
+  "printWidth": 100,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true,
   "trailingComma": "none",
-  "plugins": [
-    "prettier-plugin-apex",
-    "@prettier/plugin-xml"
-  ],
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "endOfLine": "lf",
+  "plugins": ["prettier-plugin-apex", "@prettier/plugin-xml"],
   "overrides": [
     {
       "files": "**/lwc/**/*.html",
-      "options": { "parser": "lwc" }
+      "options": {
+        "parser": "lwc"
+      }
+    },
+    {
+      "files": "**/lwc/**/*.js",
+      "options": {
+        "parser": "babel"
+      }
+    },
+    {
+      "files": "**/lwc/**/*.css",
+      "options": {
+        "parser": "css"
+      }
+    },
+    {
+      "files": "**/aura/**/*.js",
+      "options": {
+        "parser": "babel"
+      }
+    },
+    {
+      "files": "**/aura/**/*.css",
+      "options": {
+        "parser": "css"
+      }
     },
     {
       "files": "*.{cmp,page,component}",
-      "options": { "parser": "html" }
+      "options": {
+        "parser": "html"
+      }
+    },
+    {
+      "files": "*.{object,permissionset,profile}",
+      "options": {
+        "parser": "xml"
+      }
+    },
+    {
+      "files": "**/*.cls",
+      "options": {
+        "parser": "apex"
+      }
+    },
+    {
+      "files": "**/*.trigger",
+      "options": {
+        "parser": "apex"
+      }
     }
   ]
 }
