@@ -48,6 +48,9 @@
       "prettier --write",
       "eslint --fix",
       "npm run pmd:check"
+    ],
+    "*.flow-meta.xml": [
+      "node run-flow-analysis.cjs"
     ]
   }
 }
