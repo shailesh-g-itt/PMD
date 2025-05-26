@@ -37,17 +37,16 @@
     }
   },
   "lint-staged": {
-    "*.{trigger,cls}": [
+    "*.{trigger,cls,vf}": [
       "prettier --write",
       "npm run pmd:check"
     ],
     "*.{page,permissionset,profile,object}": [
       "prettier --write"
     ],
-    "*.{js,html,css,cmp}": [
+    "*.{js,html}": [
       "prettier --write",
-      "eslint --fix",
-      "npm run pmd:check"
+      "eslint --fix"
     ],
     "*.flow-meta.xml": [
       "node run-flow-analysis.cjs"
