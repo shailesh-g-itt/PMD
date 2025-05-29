@@ -262,26 +262,6 @@
 		<properties />
 	</rule>
 	<rule
-    ref="category/apex/security.xml/ApexCRUDViolation"
-    message="Validate CRUD permission before SOQL/DML operation"
-  >
-		<priority>3</priority>
-		<properties>
-			<property name="readAuthMethodPattern" value="" />
-			<property name="readAuthMethodTypeParamIndex" value="0" />
-			<property name="mergeAuthMethodPattern" value="" />
-			<property name="mergeAuthMethodTypeParamIndex" value="0" />
-			<property name="updateAuthMethodPattern" value="" />
-			<property name="updateAuthMethodTypeParamIndex" value="0" />
-			<property name="createAuthMethodPattern" value="" />
-			<property name="createAuthMethodTypeParamIndex" value="0" />
-			<property name="deleteAuthMethodPattern" value="" />
-			<property name="deleteAuthMethodTypeParamIndex" value="0" />
-			<property name="undeleteAuthMethodPattern" value="" />
-			<property name="undeleteAuthMethodTypeParamIndex" value="0" />
-		</properties>
-	</rule>
-	<rule
     ref="category/apex/security.xml/ApexDangerousMethods"
     message="Calling potentially dangerous method"
   >

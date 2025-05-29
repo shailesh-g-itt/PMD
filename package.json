@@ -21,13 +21,13 @@
     "@salesforce/eslint-config-lwc": "^4.0.0",
     "@salesforce/eslint-plugin-aura": "^3.0.0",
     "@salesforce/sfdx-lwc-jest": "^7.0.1",
-    "eslint": "^9.26.0",
+    "eslint": "^9.27.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-compat": "^6.0.2",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-prettier": "^5.4.0",
     "husky": "^9.1.7",
-    "lint-staged": "^16.0.0",
+    "lint-staged": "^16.1.0",
     "prettier": "^3.5.3",
     "prettier-plugin-apex": "^2.2.6"
   },
@@ -41,10 +41,10 @@
       "prettier --write",
       "npm run pmd:check"
     ],
-    "*.{page,permissionset,profile,object}": [
+    "*.{page,permissionset,profile,object,html}": [
       "prettier --write"
     ],
-    "*.{js,html}": [
+    "*.js": [
       "prettier --write",
       "eslint --fix"
     ],

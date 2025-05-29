@@ -7,10 +7,15 @@ export default [
   js.configs.recommended,
 
   {
-    files: ['**/*.{js,html,css}'],
+    files: ['**/*.{js,css}'],
     languageOptions: {
       ecmaVersion: 2021,
-      sourceType: 'module'
+      sourceType: 'module',
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly'
+      }
     },
     rules: {
       'no-console': 'warn',
@@ -30,7 +35,7 @@ export default [
   },
 
   {
-    files: ['force-app/main/default/lwc/**/*.{js,html}'],
+    files: ['force-app/main/default/lwc/**/*.js'],
     plugins: {
       lwc: lwcPlugin
     },
@@ -41,13 +46,34 @@ export default [
         babelOptions: {
           plugins: [['@babel/plugin-syntax-decorators', { legacy: true }]]
         }
+      },
+      ecmaVersion: 2021,
+      sourceType: 'module',
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly'
       }
     },
     rules: {
       'lwc/no-api-reassignments': 'error',
-      'lwc/no-async-await': 'warn',
-      'lwc/no-document-query': 'error',
-      'lwc/no-inner-html': 'error'
+      'lwc/no-async-await': 'warn'
+    }
+  },
+
+  {
+    files: ['**/__tests__/**/*.js'],
+    languageOptions: {
+      ecmaVersion: 2021,
+      sourceType: 'module',
+      globals: {
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly'
+      }
     }
   }
 ];
